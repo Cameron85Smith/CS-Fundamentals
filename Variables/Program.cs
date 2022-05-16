@@ -20,3 +20,4 @@ Console.WriteLine("Float Minimum Value: {0}\nFloat Maximum Value: {1}", float.Mi
 
 // This const value cannot be changed, it is a readonly value.
 const float Pi = 3.14f;
+Console.WriteLine(Pi);
