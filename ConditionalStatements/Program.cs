@@ -30,7 +30,7 @@
             var maxValue = firstInput > secondInput ? firstInput : secondInput;
             Console.WriteLine(maxValue);
 
-            // (3) Ternary - Image Orientation.
+            // (3) if/else - Image Orientation.
             Console.WriteLine("Please enter the width of the image");
             var widthUserInput = Console.ReadLine();
             Console.WriteLine("Please enter the height of the image");
