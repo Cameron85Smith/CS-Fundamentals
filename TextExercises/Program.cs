@@ -51,6 +51,7 @@ Console.WriteLine(duplicateCheck);
 // (3) - Write a program and ask the user to enter a time value in the 24-hour time format (e.g. 19:00).
 // A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display
 // "Invalid Time". If the user doesn't provide any values, consider it as invalid time.
+
 TimeSpan time;
 
 Console.WriteLine("Please enter a time value. e.g. 19:00");
@@ -68,10 +69,9 @@ Console.WriteLine(validity);
 // "NumberOfStudents". Make sure that the program is not dependent on the input. So, if the user types
 // "NUMBER OF STUDENTS", the program should still display "NumberOfStudents".
 
-var pascalCase = new StringBuilder();
-
 Console.WriteLine("Please enter a few words separated by a space.");
 var words = Console.ReadLine().ToLower().Split(' ');
+var pascalCase = new StringBuilder();
 
 foreach(var word in words)
     pascalCase.Append(char.ToUpper(word[0]) + word.Substring(1));
