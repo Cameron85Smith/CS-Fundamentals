@@ -1,5 +1,4 @@
-﻿
-// (1) For loop - Count the amount of numbers that are divisible by 3.
+﻿// (1) For loop - Count the amount of numbers that are divisible by 3.
 var count = 0;
 
 for (var i = 1; i <= 100; i++)
@@ -18,7 +17,6 @@ while (true)
 {
     Console.WriteLine("Please enter a number to add to the end result, or press ok to exit.");
     userInput = Console.ReadLine();
-    
     
     if (!String.IsNullOrWhiteSpace(userInput))
     {
@@ -57,7 +55,9 @@ while (chances > 0)
 {
     Console.WriteLine($"You have {chances} chances to guess the random number. Please enter a number");
     userGuess = Console.ReadLine();
-    guess = Convert.ToInt32(userGuess);
+
+    if (!String.IsNullOrWhiteSpace(userGuess))
+        guess = Convert.ToInt32(userGuess);
 
     if (guess == randomNumber)
     {
@@ -75,12 +75,16 @@ if (chances == 0)
 
 // (5) For each - Get the maximum number from user input.
 Console.WriteLine("Please enter a series of numbers separated by commas. Example: \"1,2,3,4,\" ");
-var numbersInput = Console.ReadLine().Split(",");
+var numInput = Console.ReadLine();
+
+if (String.IsNullOrWhiteSpace(numInput))
+    return;  
+
+var numbersInput = numInput.Split(",");
 var numbers = new int[numbersInput.Length];
 var index = 0;
 
 foreach (var number in numbersInput)
     numbers[index++] = Convert.ToInt32(number);
 
-var maximumNumber = numbers.Max();
-Console.WriteLine($"The maximum number in the unser input is {maximumNumber}");
+Console.WriteLine($"The maximum number in the user input is {numbers.Max()}");

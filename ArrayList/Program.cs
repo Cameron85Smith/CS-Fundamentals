@@ -1,6 +1,5 @@
-﻿// (1) When you post a message on Facebook, depending on the number of people who
-// like your post, Facebook displays different information. If no one likes your
-//  post, it doesn't display anything.
+﻿// (1) When you post a message on Facebook, depending on the number of people who like your post,
+// Facebook displays different information. If no one likes your post, it doesn't display anything.
 // If only one person likes your post, it displays: [Friend's Name] likes your post.
 // If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
 // If more than two people like your post, it displays: [Friend 1], [Friend 2] and [Number of Other People] others like your post.
@@ -44,10 +43,14 @@ switch(nameCount)
 // (2) Write a program and ask the user to enter their name. Use an array to
 // reverse the name and then store the result in a new string. Display the
 // reversed name on the console.
+
 var reversedName = "";
 
 Console.WriteLine("Please enter your name.");
 var userName = Console.ReadLine();
+
+if (String.IsNullOrWhiteSpace(userName))
+    return;
 
 // First convert to a char array.
 var nameChar = userName.ToCharArray();
@@ -65,6 +68,7 @@ Console.WriteLine(reversedName);
 // previously entered, display an error message and ask the user to re-try. Once
 // the user successfully enters 5 unique numbers, sort them and display the result
 // on the console.
+
 var numbers = new List<string>();
 var userNumber = "";
 
@@ -85,9 +89,7 @@ while(true)
     {
         Console.WriteLine("You entered a number that is already in the list, please add a unique number");
         continue;
-    } 
-
-    break;
+    }
 }
 
 numbers.Sort();
@@ -98,6 +100,7 @@ foreach (var number in numbers)
 // (4) Write a program and ask the user to continuously enter a number or type
 // "Quit" to exit. The list of numbers may include duplicates. Display the
 // unique numbers that the user has entered.
+
 var userNumbers = new List<int>();
 var userInput = "";
 
@@ -117,7 +120,7 @@ while (true)
     break;
 }
 
- var distinctNumbers = userNumbers.Distinct();
+var distinctNumbers = userNumbers.Distinct();
 
 foreach (var distNumbers in distinctNumbers)
     Console.WriteLine(distNumbers);
@@ -132,7 +135,10 @@ while (true)
 {
     Console.WriteLine("Please enter 5 numbers separated by a comma. Example: 1,2,3,4,5");
     
-    userList = Console.ReadLine().Split(",").ToList();
+    userInput = Console.ReadLine();
+
+    if (!String.IsNullOrWhiteSpace(userInput))
+        userList = userInput.Split(",").ToList();
 
     if (userList.Count == 0 || userList.Count < 5 )
     {

@@ -1,5 +1,4 @@
-﻿
-const int passwordLength = 10;
+﻿const int passwordLength = 10;
 
 var random = new Random();
 var buffer = new char[passwordLength];

@@ -16,7 +16,6 @@ foreach (var name in names)
 // Length
 var arrayNumbers = new[] { 3, 7, 9, 2, 14, 6 };
 
-// Length
 Console.WriteLine($"Length of the Array: {arrayNumbers.Length}");
 
 // IndexOf()

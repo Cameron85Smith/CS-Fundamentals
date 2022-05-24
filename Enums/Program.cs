@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-public enum ShippingMethod
+﻿public enum ShippingMethod
 {
     RegularAirMail = 1,
     RegisteredAirMail = 2,
@@ -16,7 +15,7 @@ class Program
         Console.WriteLine(stringValueOfEnum); 
 
         var shippingMethodId = 3; // We receive a numeric value from another system.
-        System.Console.WriteLine((ShippingMethod)shippingMethodId); // We cast this numeric value to the ShippingMethod Enum and display its string value.
+        Console.WriteLine((ShippingMethod)shippingMethodId); // We cast this numeric value to the ShippingMethod Enum and display its string value.
 
         var methodName = "RegularAirMail"; // We receive a string value from another system.
         var shippingMethodName = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName); // We parse it to a ShippingMethod type, and cast it as a ShippingMethod.

@@ -7,16 +7,11 @@
             // (1) if/else - Check if input is valid.
             Console.WriteLine("Please enter a value between 0 and 10");
             var userInput = Console.ReadLine();
-            var input = Convert.ToInt32(userInput);
 
-            if (input > 1 && input < 10)
-            {
-                Console.WriteLine("Valid");
-            }
-            else
-            {
-                Console.WriteLine("Invalid");
-            }
+            var input = Convert.ToInt32(userInput);
+            var validation = input > 1 && input < 10 ? "Valid" : "Invalid";
+
+            Console.WriteLine(validation);
 
             // (2) Ternary - Find the maximum value.
             Console.WriteLine("Please enter your first number");
@@ -26,8 +21,8 @@
 
             var firstInput = Convert.ToInt32(firstUserInput);
             var secondInput = Convert.ToInt32(secondUserInput);
-
             var maxValue = firstInput > secondInput ? firstInput : secondInput;
+
             Console.WriteLine(maxValue);
 
             // (3) if/else - Image Orientation.

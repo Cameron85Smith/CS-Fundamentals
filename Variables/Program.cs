@@ -11,7 +11,6 @@ Console.WriteLine(totalPrice);
 Console.WriteLine(character);
 Console.WriteLine(firstName);
 Console.WriteLine(isWorking);
-
 Console.WriteLine();
 
 // This is known as a "Format String". It can be used as a template.
