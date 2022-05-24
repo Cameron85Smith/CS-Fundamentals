@@ -45,10 +45,8 @@ if (userInput.Count() < 2 )
 
 var distinct = userInput.Distinct();
 
-if (distinct.Count() != userInput.Count())
-    Console.WriteLine("Duplicates");
-else
-    Console.WriteLine("No Duplicates");
+var duplicateCheck = distinct.Count() != userInput.Count() ? "Duplicates" : "No Duplicates";
+Console.WriteLine(duplicateCheck);
 
 // (3) - Write a program and ask the user to enter a time value in the 24-hour time format (e.g. 19:00).
 // A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display
