@@ -35,8 +35,6 @@
     + [Directory classes](#directory-classes)
     + [Path class](#path-class)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # C# Fundamentals
 
 C# is a programming language where .NET is a framework for building applications. The .NET framework consists of two components, the **CLR (Common Language Runtime)** and the **Class Library** for building applications.
