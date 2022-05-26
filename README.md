@@ -244,9 +244,9 @@ With **Reference** types, you have to explicitly allocate the memory yourself. T
 
 An array is a class, so it is a reference type. When we copy an array to another variable, we are actually just copying the address of the array to the other variable. This means that both arrays are using the same memory address to read that specific memory block. This implies that if a value is changed in the first, or second array, it will reflect in the other array because the change was done in a memory address that both array are dependt on.
 ```
-Heap -------------------------------------------------------Stack
-0x00416A // The address of the memory block     <-----------array1 (0x00416A) // The memory address is copied.
-[1][2][3] // the array                                    \ array2 (0x00416A) // the memory address is copied.
+Heap -------------------------------------------------Stack
+0x00416A // The address of the memory block   <-------array1 (0x00416A) // The memory address is copied.
+[1][2][3] // the array                              \ array2 (0x00416A) // the memory address is copied.
 ```
 
 As can be seen, the memory address is copied, not the actual value.
