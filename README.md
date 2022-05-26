@@ -33,9 +33,20 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 |                   | int           | int32         | 4             | -2,1B to 2.1B           |
 |                   | long          | int64         | 8             | ...                     |
 | Real Numbers      | float (1,2f)  | Single        | 4             | -3,4x10^38 to 3,4x10^38 |
+|                   | double        | Double        | 8             | ...                     |
+|                   | decimal (1,2m)| Decimal       | 16            | -7,9x10^28 to 7,9x10^28 |
+| Character         | char          | Char          | 2             | Unicode Characters      |
+| Boolean           | bool          | Boolean       | 1             | True/False              | 
 
 
 ### Non-Primitive Types
+
+| Type          |
+| ------------- |
+| String        |
+| Array         |
+| Enum          |
+| Class         |
 
 ## Overflow
 
