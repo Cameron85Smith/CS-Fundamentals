@@ -28,27 +28,27 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 
 **All primitives map to a struct**
 
-| Type              | C#            | .NET Type     | Bytes         | Range                   |
-| -------------     | ------------- | ------------- | ------------- | -------------           |
-| Integral Numbers  | byte          | Byte          | 1             | 0 to 255                |
-|                   | short         | int16         | 2             | -32,768 to 32,767       |
-|                   | int           | int32         | 4             | -2,1B to 2.1B           |
-|                   | long          | int64         | 8             | ...                     |
-| Real Numbers      | float (1,2f)  | Single        | 4             | -3,4x10^38 to 3,4x10^38 |
-|                   | double        | Double        | 8             | ...                     |
-|                   | decimal (1,2m)| Decimal       | 16            | -7,9x10^28 to 7,9x10^28 |
-| Character         | char          | Char          | 2             | Unicode Characters      |
-| Boolean           | bool          | Boolean       | 1             | True/False              | 
+| Type             | C#             | .NET Type | Bytes | Range                   |
+|------------------|----------------|-----------|-------|-------------------------|
+| Integral Numbers | byte           | Byte      | 1     | 0 to 255                |
+|                  | short          | int16     | 2     | -32,768 to 32,767       |
+|                  | int            | int32     | 4     | -2,1B to 2.1B           |
+|                  | long           | int64     | 8     | ...                     |
+| Real Numbers     | float (1,2f)   | Single    | 4     | -3,4x10^38 to 3,4x10^38 |
+|                  | double         | Double    | 8     | ...                     |
+|                  | decimal (1,2m) | Decimal   | 16    | -7,9x10^28 to 7,9x10^28 |
+| Character        | char           | Char      | 2     | Unicode Characters      |
+| Boolean          | bool           | Boolean   | 1     | True/False              | 
 
 
 ### Non-Primitive Types
 
-| Type          |
-| ------------- |
-| String        |
-| Array         |
-| Enum          |
-| Class         |
+| Type   |
+|--------|
+| String |
+| Array  |
+| Enum   |
+| Class  |
 
 ### Overflow
 
@@ -95,7 +95,7 @@ To convert non-compatible types we need to use either **int.Parse()** or **Conve
 The difference between Parse and Convert is that when we try to **Parse** a null value, the compiler will throw an ArgumentNullException; **Convert** will return a zero.
 ```
 string s = "1";
-// int i = (int)s; // This won't compile
+// int i = (int)s; // This won't compile.
 int i = Convert.ToInt32(s);
 // or
 int j = int.Parse(s);
@@ -205,6 +205,15 @@ namespace ConsoleApplication {
 } 
 ```
 
+### Formatting
+| Format Specifier | Description | Example                            |
+|------------------|-------------|------------------------------------|
+| c or C           | Currency    | 123456(C) -> $123,456              |
+|d or D            | Decimal     | 1234(D6) -> 001234                 |
+|e or E            | Exponential | 1052.0329112756(E) -> 1.052033E+003|
+|f or F            | Fixed Point | 1234.567(F1) -> 1234.5             |
+|x or X            | Hexadecimal | 255(X) -> FF                       |
+
 ### Enums
 
 An enum is a data type that represents a set of name/value pairs (constants). You should use enums when you have a number of related constants. Internally, an enum is an integer.
@@ -278,9 +287,56 @@ We use the Random class when we want to generate a random value.
 We have two types of multi-dimension arrays; **Rectangular and Jagged**.
 
 In a Rectangular array, the array has the exact same number of columns.
-
 ```
+var matrix = new int[3,5]; // One bracket.
+
       [0 | 1 | 2 | 3 | 4 | 5]
 3x5 = [0 | 1 | 2 | 3 | 4 | 5]
       [0 | 1 | 2 | 3 | 4 | 5]
 ```
+
+In C#, it is easier to implement a Jagged array instead of a Rectangular array becuase C# is optimized for single arrays, and this is what Jagged arrays are based on.
+Jagged arrays are arrays with a variable amount of columns.
+```
+var jagged = new int[3][]; // Two brackets.
+
+[0 | 1 | 2 | 3]
+[0 | 1 | 2 | 3 | 4 ]
+[0 | 1 | 2 ]
+```
+
+## 11. List
+
+The difference between an Array and a List is that an Array have a fixed size, where a List has a dynamic size. We use a List when we don't know how many objects we will be working with. A List is a generic type and it is indicated by angle brackets.
+
+```
+var numbers = new List<int>();
+```
+
+## 12. StringBuilder
+
+The string class is immutable, which means that once you create a string object you cannot change its content. If you're going to do a lot of string manipulation, you can use a StringBuilder.
+
+StringBuilders is a class that is defined in the System.Text namespace, and it represents a mutable string. It provides methods for manipulating a string, like Append(), Insert(), etc.
+
+## 13. Working with Files, Directories, and Paths
+
+### File classes
+
+File, FileInfo classes provide methods for creating, copying, deleting, moving, and opening files.
+
+- File provides **static** methods.
+- FileInfo provides **instance** methods.
+
+The difference between the two is that if you are going to perform a **small number of operations** on a file, it is more convenient to access the static methods of the **File class**. However, the **problem** with the static method is that every time you call a static method, some **security checking** is done by the operating system to make sure that the current user has access to the file. If you are going to have a **large number of operations** on a file, this is going to **affect the performance** of the application. Alternatively, it is **more efficient** to create an instance of the **FileInfo class** and access its instance methods. Using this approach, the **security check is done once** when creating an instance of the FileInfo class.
+
+### Directory classes
+
+Similar to the File and FileInfo class, we have Directory and DirectoryInfo class.
+
+- Directory provides static methods.
+- DirectoryInfo provides instance methods.
+
+### Path class
+
+The Path class provides methods to work with a string that contains a file, or directory path information.
