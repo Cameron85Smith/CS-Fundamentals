@@ -74,7 +74,7 @@ byte b = 1;          //                            00000001
 int i = b;           // 00000000 00000000 00000000 00000001
 
 int i = 1;
-float f = i; // We are implicitly telling the compiler to convert this int to a float.
+float f = i; // We are implicitly telling the compiler to cast this int to a float.
 ```
 
 ### Explicit Type Conversion
@@ -84,13 +84,16 @@ float f = i; // We are implicitly telling the compiler to convert this int to a 
 ```
 int i = 1;
 // byte b = 1; // This won't compile
-byte b = (byte)i; // We are explicitly telling the compiler to convert this int to a byte.
+byte b = (byte)i; // We are explicitly telling the compiler to cast this int to a byte.
 
 float f = 1.0f;
-int i = (int)f; // We are explicitly telling the compiler to convert this float to an int.
+int i = (int)f; // We are explicitly telling the compiler to cast this float to an int.
 ```
 
 ### Non-Compatible Types
+
+To convert non-compatible types we need to use either **int.Parse()** or **Convert.ToInt32**.
+The difference between Parse and Convert is that when we try to **Parse** a null value, the compiler will throw an ArgumentNullException; **Convert** will return a zero.
 
 ```
 string s = "1";
@@ -99,9 +102,6 @@ int i = Convert.ToInt32(s);
 // or
 int j = int.Parse(s);
 ```
-
-The difference between Parse and Convert is that when we try to **Parse** a null value, the compiler will throw an ArgumentNullException, where **Convert** will return a zero.
-
 ## Operators
 
 ### Arithmatic
