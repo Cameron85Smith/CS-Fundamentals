@@ -26,6 +26,8 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 
 ### Primitive Types
 
+**All primitives map to a struct**
+
 | Type              | C#            | .NET Type     | Bytes         | Range                   |
 | -------------     | ------------- | ------------- | ------------- | -------------           |
 | Integral Numbers  | byte          | Byte          | 1             | 0 to 255                |
@@ -51,7 +53,6 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 ### Overflow
 
 An **Overflow** is when we exceed the boundary of a data type.
-
 ```
 byte number = 255;
 number = number + 1;
@@ -68,7 +69,6 @@ An **Explicit** conversion is one which has to be stated explicitly, an **Implic
 ### Implicit Type Conversion
 
 **Implicit conversion** is the conversion **from a derived class into a base class**, like converting a byte to an int, or an int to a float.
-
 ```
 byte b = 1;          //                            00000001
 int i = b;           // 00000000 00000000 00000000 00000001
@@ -80,7 +80,6 @@ float f = i; // We are implicitly telling the compiler to cast this int to a flo
 ### Explicit Type Conversion
 
 **Explicit conversion** is the conversion that may cause data loss. Explicit conversion converts from a **base class into a derived class**.
-
 ```
 int i = 1;
 // byte b = 1; // This won't compile
@@ -94,48 +93,42 @@ int i = (int)f; // We are explicitly telling the compiler to cast this float to 
 
 To convert non-compatible types we need to use either **int.Parse()** or **Convert.ToInt32**.
 The difference between Parse and Convert is that when we try to **Parse** a null value, the compiler will throw an ArgumentNullException; **Convert** will return a zero.
-
 ```
 string s = "1";
-// int i = (int)s; This won't compile
+// int i = (int)s; // This won't compile
 int i = Convert.ToInt32(s);
 // or
 int j = int.Parse(s);
 ```
-## Operators
+## 5. Operators
 
 ### Arithmatic
 
-**Postfix Increment** - First, the value of a is assigned to b, and then a will be incremented.
-
+**Postfix Increment**: First, the value of a is assigned to b, then a will be incremented.
 ```
 int a = 1;
 int b = a++;  // a = 2, b = 1
 ```
 
 **Prefix Increment** - First, the value of a is incremented, then the value is assigned to b.
-
 ```
 int a = 1;
 int b = ++a  // a = 2, b = 2
 ```
 
-## Non-Primitive Types
+## 6. Non-Primitive Types
 
 ### Classes
 
-A **class** is a type, also known as a blueprint, from which we create objects. Am **object** is an instace of a class.
-
-Classes are treated differently from primitive types in that **we need to use the new operator to explicitly allocate memory for it**.
-
+A **class** is a type, also known as a blueprint, from which we create objects. An **object** is an instace of a class.
+Classes are treated different from primitive types in that **we need to use the new operator to explicitly allocate memory for it**.
 ```
 Person person = new Person();
 ```
 
 ### Static Modifier
 
-**Without the static** keyword, you have to create an instance of the class for wherever, and whenever it is needed. This means that there is memory allocated fo each instance of the class. **With the static keyword**, a static member is accessible from the class itself; any code path can access it, provided it references the namespace. It behaves like a **Singleton** except, you can't inherit with a static class.
-
+**Without the static** keyword, you have to create an instance of the class for wherever, and whenever it is needed. This means that memory is allocated for each instance of the class. **With the static keyword**, you are creating one instance of the class in memory, so it behaves like a **Singleton**, except you can't inherit with a static class. A static member is accessible from the class itself; any code path can access it, provided it references the namespace.
 ```
 public class Calculator
 {
@@ -162,7 +155,6 @@ Add()     Add()     Add()
 ### Struct
 
 Structs combine related fields and methods together. **You should use a Struct when you want to define a small, lightweight object**.
-
 ```
 public struct RGBColour
 {
@@ -176,27 +168,46 @@ public struct RGBColour
 
 An array is a data structure to store **a collection of variables of the same type**. Arrays have a fixed size and it can not be changed. It is also zero based.
 
+**arrays map to a class, making it a Non-Primitive**
 ```
 int number1;
 int number2;
 int number3;
 
-int [] numbers = new int [3] {1, 2, 3}; // The number three in the square brackets represents the size of the array.
+// The number three in the square bracket represents the size of the array.
+int [] numbers = new int [3] {1, 2, 3};
 ```
 
 ### Strings
 
 A **string is a sequence of characters**. We use double quotes for strings, and single quotes for characters. Strings are also **immutable**, meaning that they can not be changed after you create it. There are methods in the string class that allows us to manipulate strings and modify their values, but all of these methods return a new string, meaning that the original string is not changed. This is what is meant by immutable. 
 
-**All primitives map to a struct, but strings map to a class, hence it being a Non-Primitive.**
+**strings map to a class, making it a Non-Primitive.**
 
-string is a type in C#.
-String is a type in the .NET framework.
+**string is a C# type.**
+**String is a .NET framework type.**
+
+Both are compiled to System.String in IL (Intermediate Language).
+System.String is a class and used for accessing string static methods like String.Format(), String.Compare(), etc.
+
+Here, you can see that **string** is used for declaring variable variables whereas **String** is used for access the static method String.Concat() that joins two strings together.
+```
+using System;  
+namespace ConsoleApplication {  
+    public class Program {  
+        public static void Main(string[] args) {  
+            string s = "Hello ";  
+            string t = "World";  
+            string st = String.Concat(s, t);  
+            Console.WriteLine(st);  
+        }  
+    }  
+} 
+```
 
 ### Enums
 
 An enum is a data type that represents a set of name/value pairs (constants). You should use enums when you have a number of related constants. Internally, an enum is an integer.
-
 ```
 public enum ShippingMethod
 {
@@ -213,29 +224,30 @@ var method = ShippingMethod.Express;
 
 ### Reference Types and Value Types
 
-All **primitive types are structure**. We use structures for small types, like RGB colours and points. All structures are small types, they take no more than 8 bytes. It is internally defined as a structure in .NET.
+All **primitive types are structures**. We use structures for small types, like RGB colours and points. Tthey take no more than 8 bytes. It is internally defined as a structure in .NET.
 
 In terms of memory management, **classes and structures** are treated differently at runtime . **Structures are what we call value types while classes are reference types**. 
 
-With **Value** types, a part of the memory call **stack** is allocated for the variable. When the variable goes out of scope, it will immediately get removed from the stack by runtime, or CLR.
+With **Value** types, a part of the memory call **stack** is allocated for the variable. When the variable goes out of scope, it will immediately get removed from the stack by runtime, or CLR (Common Language Runtime).
 
 An integer is a **value type**. When we copy a value type to another variable, a copy of the value is stored in the target location in memory, in a **stack**.
 
-Stack
-a:10
-
-b:10
-
 b represents a new location in the stack. The variables a, and b, are **completely independent** from one another. **Making a change to one does not affect the other**.
 
-With **Reference** types, you have to explicitly allocate the memory yourself. The **new** operator tells the runtime to allocate memory to this object. This memory allocation happens on a **Heap**, which is more sustainable than a **Stack**, simply because it is more flexible in terms of dynamically allocating and de-allocating memory as needed. When the object goes out of scope, it will still exist in the heap up until it is removed by Garbage Collection, which is done by CLR.
+Stack
+```
+a:10
+b:10
+```
 
+With **Reference** types, you have to explicitly allocate the memory yourself. The **new** operator tells the runtime to allocate memory to this object. This memory allocation happens on a **Heap**, which is more sustainable than a **Stack**, simply because it is more flexible in terms of dynamically allocating and de-allocating memory as needed. When the object goes out of scope, it will still exist in the heap up until it is removed by Garbage Collection, which is done by CLR (Common Language Runtime).
 
-An array is a class, so it is a reference type. When we copy an array to another variable, we are actually just copying the address of the array to the other variable. This means that both arrats are using the same memory address to read that specific memory block.  This implies that if a value is changed in the first, or second array, it will reflect in the other array because the change was done in a memory address that both array are dependt on.
+An array is a class, so it is a reference type. When we copy an array to another variable, we are actually just copying the address of the array to the other variable. This means that both arrays are using the same memory address to read that specific memory block. This implies that if a value is changed in the first, or second array, it will reflect in the other array because the change was done in a memory address that both array are dependt on.
 
-Heap                                                                     Stack
-
+|Heap|                                            Stack|
+```
 0x00416A // The address of the memory block     <-------------------------array1 (0x00416A) // The memory address is copied.
 [1][2][3] // the array                                                  \ array2 (0x00416A) // the memory address is copied.
+```
 
 As can be seen, the memory address is copied, not the actual value.
