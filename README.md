@@ -1,3 +1,42 @@
+
+- [C# Fundamentals](#c--fundamentals)
+  * [1. CLR](#1-clr)
+  * [2. Architecture of .NET Applications](#2-architecture-of-net-applications)
+    + [File Structure](#file-structure)
+  * [3. Variables and Constants](#3-variables-and-constants)
+    + [Primitive Types](#primitive-types)
+    + [Non-Primitive Types](#non-primitive-types)
+    + [Overflow](#overflow)
+    + [Scope](#scope)
+  * [4. Type Conversion](#4-type-conversion)
+    + [Implicit Type Conversion](#implicit-type-conversion)
+    + [Explicit Type Conversion](#explicit-type-conversion)
+    + [Non-Compatible Types](#non-compatible-types)
+  * [5. Operators](#5-operators)
+    + [Arithmetic](#arithmatic)
+  * [6. Non-Primitive Types](#6-non-primitive-types)
+    + [Classes](#classes)
+    + [Static Modifier](#static-modifier)
+    + [Struct](#struct)
+    + [Arrays](#arrays)
+    + [Strings](#strings)
+    + [Formatting](#formatting)
+    + [Enums](#enums)
+  * [7. Reference Types and Value Types](#7-reference-types-and-value-types)
+  * [8. Iteration Statements](#8-iteration-statements)
+    + [Conditional Statements](#conditional-statements)
+    + [Iteration Statements](#iteration-statements)
+  * [9. Random Class](#9-random-class)
+  * [10. Multi-Dimension Arrays](#10-multi-dimension-arrays)
+  * [11. List](#11-list)
+  * [12. StringBuilder](#12-stringbuilder)
+  * [13. Working with Files, Directories, and Paths](#13-working-with-files--directories--and-paths)
+    + [File classes](#file-classes)
+    + [Directory classes](#directory-classes)
+    + [Path class](#path-class)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # C# Fundamentals
 
 C# is a programming language where .NET is a framework for building applications. The .NET framework consists of two components, the **CLR (Common Language Runtime)** and the **Class Library** for building applications.
@@ -282,7 +321,7 @@ The control flow of your application depends largely on conditional and iteratio
 
 We use the Random class when we want to generate a random value.
 
-## 10. Multi-Dimesion Arrays
+## 10. Multi-Dimension Arrays
 
 We have two types of multi-dimension arrays; **Rectangular and Jagged**.
 
