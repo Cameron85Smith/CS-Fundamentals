@@ -26,9 +26,14 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 
 ### Primitive Types
 
-| Type | C# | .NET Type | Bytes | Range |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Integral Numbers  | byte | Byte | 1 | 0 to 255 |
+| Type              | C#            | .NET Type     | Bytes         | Range                   |
+| -------------     | ------------- | ------------- | ------------- | -------------           |
+| Integral Numbers  | byte          | Byte          | 1             | 0 to 255                |
+|                   | short         | int16         | 2             | -32,768 to 32,767       |
+|                   | int           | int32         | 4             | -2,1B to 2.1B           |
+|                   | long          | int64         | 8             | ...                     |
+| Real Numbers      | float (1,2f)  | Single        | 4             | -3,4x10^38 to 3,4x10^38 |
+
 
 ### Non-Primitive Types
 
