@@ -222,7 +222,7 @@ We can use the enum with dot notation.
 var method = ShippingMethod.Express;
 ```
 
-### Reference Types and Value Types
+## 7. Reference Types and Value Types
 
 All **primitive types are structures**. We use structures for small types, like RGB colours and points. Tthey take no more than 8 bytes. It is internally defined as a structure in .NET.
 
@@ -250,3 +250,37 @@ Heap -------------------------------------------------Stack
 ```
 
 As can be seen, the memory address is copied, not the actual value.
+
+## 8. Iteration Statements
+
+We use a **for loop** when we know how many times we are going to iterate through a collection.
+We use a **while loop** when we don't know how many times we are going to do an iteration.
+
+The control flow of your application depends largely on conditional and iteration statements.
+
+### Conditional Statements
+
+- if/else
+- switch
+
+### Iteration Statements
+
+- for loops
+- foreach loops
+- while loops
+
+## 9. Random Class
+
+We use the Random class when we want to generate a random value.
+
+## 10. Multi-Dimesion Arrays
+
+We have two types of multi-dimension arrays; **Rectangular and Jagged**.
+
+In a Rectangular array, the array has the exact same number of columns.
+
+```
+      [0 | 1 | 2 | 3 | 4 | 5]
+3x5 = [0 | 1 | 2 | 3 | 4 | 5]
+      [0 | 1 | 2 | 3 | 4 | 5]
+```
