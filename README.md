@@ -158,7 +158,7 @@ int b = ++a  // a = 2, b = 2
 
 ### Classes
 
-A **class** is a type, also known as a blueprint, from which we create objects. An **object** is an instace of a class.
+A **class** is a type, also known as a blueprint, from which we create objects. An **object** is an instance of a class.
 Classes are treated different from primitive types in that **we need to use the new operator to explicitly allocate memory for it**.
 ```
 Person person = new Person();
@@ -184,7 +184,7 @@ public class Calculator
 int result = Calculator.Add(1, 2);
 ```
 
-**Without static**, when you create three instances of a class, each object will have the add method, and each object will be allocated memory.
+**Without static**, when you create three instances of a class, each object will have the Add() method, and each object will be allocated memory.
 calc1     calc2     calc3
 Add()     Add()     Add()
 
@@ -254,7 +254,7 @@ namespace ConsoleApplication {
 
 ### Enums
 
-An enum is a data type that represents a set of name/value pairs (constants). You should use enums when you have a number of related constants. Internally, an enum is an integer.
+An Enum is a data type that represents a set of name/value pairs (constants). You should use Enum when you have a number of related constants. Internally, an Enum is an integer.
 ```
 public enum ShippingMethod
 {
@@ -264,14 +264,14 @@ public enum ShippingMethod
 }
 ```
 
-We can use the enum with dot notation.
+We can use the Enum with dot notation.
 ```
 var method = ShippingMethod.Express;
 ```
 
 ## 7. Reference Types and Value Types
 
-All **primitive types are structures**. We use structures for small types, like RGB colours and points. Tthey take no more than 8 bytes. It is internally defined as a structure in .NET.
+All **primitive types are structures**. We use structures for small types, like RGB colours and points. Structures take no more than 8 bytes. It is internally defined as a structure in .NET.
 
 In terms of memory management, **classes and structures** are treated differently at runtime . **Structures are what we call value types while classes are reference types**. 
 
@@ -289,7 +289,7 @@ b:10
 
 With **Reference** types, you have to explicitly allocate the memory yourself. The **new** operator tells the runtime to allocate memory to this object. This memory allocation happens on a **Heap**, which is more sustainable than a **Stack**, simply because it is more flexible in terms of dynamically allocating and de-allocating memory as needed. When the object goes out of scope, it will still exist in the heap up until it is removed by Garbage Collection, which is done by CLR (Common Language Runtime).
 
-An array is a class, so it is a reference type. When we copy an array to another variable, we are actually just copying the address of the array to the other variable. This means that both arrays are using the same memory address to read that specific memory block. This implies that if a value is changed in the first, or second array, it will reflect in the other array because the change was done in a memory address that both array are dependt on.
+An array is a class, so it is a reference type. When we copy an array to another variable, we are actually just copying the address of the array to the other variable. This means that both arrays are using the same memory address to read that specific memory block. This implies that if a value is changed in the first, or second array, it will reflect in the other array because the change was done in a memory address that both arrays are dependent on.
 ```
 Heap -------------------------------------------------Stack
 0x00416A // The address of the memory block   <-------array1 (0x00416A) // The memory address is copied.
