@@ -31,7 +31,7 @@
   * [10. Multi-Dimension Arrays](#10-multi-dimension-arrays)
   * [11. List](#11-list)
   * [12. StringBuilder](#12-stringbuilder)
-  * [13. Working with Files, Directories, and Paths](#13-working-with-files--directories--and-paths)
+  * [13. Working with Files, Directories, and Paths](#13-working-with-files-directories-and-paths)
     + [File classes](#file-classes)
     + [Directory classes](#directory-classes)
     + [Path class](#path-class)
