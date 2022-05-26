@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿// Introduction to StringBuilder.
+
+using System.Text;
+
 var builder = new StringBuilder("Hello World");
 var chainedBuilder = new StringBuilder("Hello World");
 

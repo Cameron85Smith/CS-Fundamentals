@@ -1,4 +1,6 @@
-﻿// For loop - Get all even numbers.
+﻿// Introduction to Iterations.
+
+// For loop - Get all even numbers.
 Console.WriteLine("For Loop - Get all even numbers.");
 
 for (var i = 1; i <= 10; i++)

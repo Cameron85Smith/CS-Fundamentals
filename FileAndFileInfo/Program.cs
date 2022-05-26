@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿// Introduction to the File and FileInfo classes.
+
+using System.IO;
 
 // If you make use of a small number of operations, it is better to use the
 // File class as it provides static methods. However, every time you call a

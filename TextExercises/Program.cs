@@ -1,4 +1,5 @@
 ﻿using System.Text;
+
 // (1) - Write a program and ask the user to enter a few numbers separated by a hyphen.
 // Work out if the numbers are consecutive. For example, if the input is "5-6-7-8-9"
 // or "20-19-18-17-16", display a message: "Consecutive"; otherwise, display "Not Consecutive".
@@ -47,7 +48,6 @@ Console.WriteLine(duplicateCheck);
 // (3) - Write a program and ask the user to enter a time value in the 24-hour time format (e.g. 19:00).
 // A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display
 // "Invalid Time". If the user doesn't provide any values, consider it as invalid time.
-
 TimeSpan time;
 
 Console.WriteLine("Please enter a time value. e.g. 19:00");

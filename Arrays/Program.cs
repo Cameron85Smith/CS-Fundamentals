@@ -1,4 +1,6 @@
-﻿var numbers = new int[3] {1, 2, 3};
+﻿// Introduction to Arrays.
+
+var numbers = new int[3] {1, 2, 3};
 
 foreach (var value in numbers)
     Console.WriteLine(value);
@@ -8,7 +10,7 @@ var flags = new bool[2] {true, false};
 foreach (var flag in flags)
     Console.WriteLine(flag);
 
-var names = new string[3] {"Cameron", "Chanray", "Duncan"};
+var names = new string[3] {"John", "Jack", "Sally"};
 
 foreach (var name in names)
     Console.WriteLine(name);

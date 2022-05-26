@@ -43,7 +43,6 @@ switch(nameCount)
 // (2) Write a program and ask the user to enter their name. Use an array to
 // reverse the name and then store the result in a new string. Display the
 // reversed name on the console.
-
 var reversedName = "";
 
 Console.WriteLine("Please enter your name.");
@@ -68,7 +67,6 @@ Console.WriteLine(reversedName);
 // previously entered, display an error message and ask the user to re-try. Once
 // the user successfully enters 5 unique numbers, sort them and display the result
 // on the console.
-
 var numbers = new List<string>();
 var userNumber = "";
 
@@ -100,7 +98,6 @@ foreach (var number in numbers)
 // (4) Write a program and ask the user to continuously enter a number or type
 // "Quit" to exit. The list of numbers may include duplicates. Display the
 // unique numbers that the user has entered.
-
 var userNumbers = new List<int>();
 var userInput = "";
 

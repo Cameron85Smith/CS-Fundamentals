@@ -1,4 +1,6 @@
-﻿public class Person
+﻿// Introduction to Reference and Value types.
+
+public class Person
 {
     public int Age;
 }

@@ -1,4 +1,6 @@
-﻿const int passwordLength = 10;
+﻿// Introduction to the Random class.
+
+const int passwordLength = 10;
 
 var random = new Random();
 var buffer = new char[passwordLength];

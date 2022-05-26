@@ -1,4 +1,6 @@
-﻿var numbers = new List<int>() {1, 2, 3, 4};
+﻿// Introduction to List.
+
+var numbers = new List<int>() {1, 2, 3, 4};
 
 // Add()
 numbers.Add(1);

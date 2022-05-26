@@ -1,10 +1,12 @@
-﻿var firstName = "Cameron";
+﻿// Introduction to String.
+
+var firstName = "John";
 var lastName = "Smith";
 
 var fullName = string.Format("My full name is {0} {1} ", firstName, lastName);
 Console.WriteLine(fullName);
 
-var listOfNames = new string[3] { "Cameron", "Chanray", "Duncan" };
+var listOfNames = new string[3] { "John", "Jack", "Sally" };
 
 var names = string.Join(", ", listOfNames);
 Console.WriteLine(names);

@@ -1,4 +1,6 @@
-﻿using Classes.Math;
+﻿// Introduction to Classes.
+
+using Classes.Math;
 
 namespace Classes
 {

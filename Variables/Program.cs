@@ -1,4 +1,6 @@
-﻿byte number = 2; // byte
+﻿// Introduction to Variables.
+
+byte number = 2; // byte
 var counter = 10; // int32
 var totalPrice = 20.95f; // "f" tells the compiler to treat the value as a float 
 var character = 'A'; // Single quote for characters

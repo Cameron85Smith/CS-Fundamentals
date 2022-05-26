@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿// Introduction to the Directory and DirectoryInfo classes.
+
+using System.IO;
 
 // The Directory class provides static methods.
 

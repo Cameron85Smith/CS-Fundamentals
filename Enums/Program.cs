@@ -1,4 +1,6 @@
-﻿public enum ShippingMethod
+﻿// Introduction to Enums.
+
+public enum ShippingMethod
 {
     RegularAirMail = 1,
     RegisteredAirMail = 2,
