@@ -29,8 +29,10 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 
 An **Overflow** is when we exceed the boundary of a data type.
 
+```
 byte number = 255;
 number = number + 1;
+```
 
 ## Scope
 
@@ -44,29 +46,36 @@ An **Explicit** conversion is one which has to be stated explicitly, an **Implic
 
 **Implicit conversion** is the conversion **from a derived class into a base class**, like converting an int to a float.
 
+```
 byte b = 1;          //                            00000001
 int i = b;           // 00000000 00000000 00000000 00000001
 
 int i = 1;
 float f = i;
+```
 
 ### Explicit Type Conversion
 
 **Explicit conversion** is the conversion that may cause data loss. Explicit conversion converts from a **base class into a derived class**.
 
+```
 int i = 1;
 // byte b = 1; This won't compile
 byte b = (byte)i;
 
 float f = 1.0f;
 int i = (int)f;
+```
 
 ### Non-Compatible Types
+
+```
 string s = "1";
 // int i = (int)s; This won't compile
 int i = Convert.ToInt32(s);
-or
+// or
 int j = int.Parse(s);
+```
 
 The difference between Parse and Convert is that when we try to **Parse** a null value, the compiler will throw an ArgumentNullException, where **Convert** will return a zero.
 
@@ -76,13 +85,17 @@ The difference between Parse and Convert is that when we try to **Parse** a null
 
 **Postfix Increment** - First, the value of a is assigned to b, and then a will be incremented.
 
+```
 int a = 1;
 int b = a++;  // a = 2, b = 1
+```
 
 **Prefix Increment** - First, the value of a is incremented, then the value is assigned to b.
 
+```
 int a = 1;
 int b = ++a  // a = 2, b = 2
+```
 
 ## Non-Primitive Types
 
@@ -92,12 +105,15 @@ A **class** is a type, also known as a blueprint, from which we create objects. 
 
 Classes are treated differently from primitive types in that **we need to use the new operator to explicitly allocate memory for it**.
 
+```
 Person person = new Person();
+```
 
 ### Static Modifier
 
 **Without the static** keyword, you have to create an instance of the class for wherever, and whenever it is needed. This means that there is memory allocated fo each instance of the class. **With the static keyword**, a static member is accessible from the class itself; any code path can access it, provided it references the namespace. It behaves like a **Singleton** except, you can't inherit with a static class.
 
+```
 public class Calculator
 {
     public static int Add(int a, int b)
@@ -112,6 +128,7 @@ public class Calculator
 
 // We now have direct access to the method due to the member being static.
 int result = Calculator.Add(1, 2);
+```
 
 **Without static**, when you create three instances of a class, each object will have the add method, and each object will be allocated memory.
 calc1     calc2     calc3
@@ -123,22 +140,26 @@ Add()     Add()     Add()
 
 Structs combine related fields and methods together. **You should use a Struct when you want to define a small, lightweight object**.
 
+```
 public struct RGBColour
 {
     public int Red;
     public int Green;
     public int Blue;
 }
+```
 
 ### Arrays
 
 An array is a data structure to store **a collection of variables of the same type**. Arrays have a fixed size and it can not be changed. It is also zero based.
 
+```
 int number1;
 int number2;
 int number3;
 
 int [] numbers = new int [3] {1, 2, 3}; // The number three in the square brackets represents the size of the array.
+```
 
 ### Strings
 
@@ -153,15 +174,19 @@ String is a type in the .NET framework.
 
 An enum is a data type that represents a set of name/value pairs (constants). You should use enums when you have a number of related constants. Internally, an enum is an integer.
 
+```
 public enum ShippingMethod
 {
     RegularAirMail = 1,
     RegisteredAirMail = 2,
     Express = 3
 }
+```
 
 We can use the enum with dot notation.
+```
 var method = ShippingMethod.Express;
+```
 
 ### Reference Types and Value Types
 
