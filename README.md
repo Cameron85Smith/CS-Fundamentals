@@ -154,7 +154,7 @@ int a = 1;
 int b = ++a  // a = 2, b = 2
 ```
 
-## 6. Non-Primitive Types: [Class Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Classes) | [Array Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Arrays) | [String Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Strings) | [Enum Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Enums) | [Text Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Strings)
+## 6. Non-Primitive Types: [Class Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Classes) | [Array Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Arrays) | [String Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Strings) | [Enum Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Enums) | [Text Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/TextExercise)
 
 ### Classes
 
