@@ -1,3 +1,4 @@
+# C# Fundamentals
 
 - [C# Fundamentals](#c--fundamentals)
   * [1. CLR](#1-clr)
@@ -35,7 +36,7 @@
     + [Directory classes](#directory-classes)
     + [Path class](#path-class)
 
-# C# Fundamentals
+# Introduction
 
 C# is a programming language where .NET is a framework for building applications. The .NET framework consists of two components, the **CLR (Common Language Runtime)** and the **Class Library** for building applications.
 
