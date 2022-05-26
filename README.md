@@ -16,14 +16,21 @@ Classes are contained in a **Namespace**. A Namespace helps us to organize our c
 
 Namespaces are contained in an **Assembly**. Physically, it is a file on disk as either an executable file, or a **DLL (Dynamically Linked Library)**. An Assembly is a single unit of deployment.
 
+### File Structure
+
 When generating a console application, an **AssemblyInfo.cs** file is created. AssemblyInfo.cs is the identification for the assembly that will be produced as a result of compiling the application. Under the **References** folder, we find assemblies that the application depends on so that it can execute and do its job. **App.Config** is an XML file that we use to store the configuration of the application. As an example, we can store the database connection string for a database in App.Config.
 
 ## Variables and Constants
 
 A **Variable** is a name given to a storage location in memory. A **constant** is an **immutable** value where it is known at compile time, and its value cannot be changed during the lifetime of the application. We use constants to create safety in our application where we don't want any logic to change the value by mistake.
 
-### Primitive and Non-Primitive Types
+### Primitive Types
 
+| Type | C# | .NET Type | Bytes | Range |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Integral Numbers  | byte | Byte | 1 | 0 to 255 |
+
+### Non-Primitive Types
 
 ## Overflow
 
