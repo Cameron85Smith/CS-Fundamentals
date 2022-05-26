@@ -14,7 +14,7 @@
     + [Explicit Type Conversion](#explicit-type-conversion)
     + [Non-Compatible Types](#non-compatible-types)
   * [5. Operators](#5-operators)
-    + [Arithmetic](#arithmatic)
+    + [Arithmetic](#arithmetic)
   * [6. Non-Primitive Types](#6-non-primitive-types)
     + [Classes](#classes)
     + [Static Modifier](#static-modifier)
@@ -138,7 +138,7 @@ int i = Convert.ToInt32(s);
 // or
 int j = int.Parse(s);
 ```
-## 5. Operators : [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Operators)
+## 5. Operators: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Operators)
 
 ### Arithmetic
 
