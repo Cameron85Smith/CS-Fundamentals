@@ -2,11 +2,11 @@
 
 C# is a programming language where .NET is a framework for building applications. The .NET framework consists of two components, the **CLR (Common Language Runtime)** and the **Class Library** for building applications.
 
-## CLR
+## 1. CLR
 
 When we compile our C# code, it is first converted to **IL (Intermediate Language)** code. The **CLR** takes the IL code and converts it to native code. CLR is essentially an application in memory whose job is to convert IL code to native code. This process happens during runtime and it is called **Just-In-Time compilation (JIT)**.
 
-## Architecture of .NET Applications
+## 2. Architecture of .NET Applications
 
 At a very high level, when you build an application with C#, your application consist of building blocks called **Classes**. These classes collaborate with one another, and as a result, these classes provide functionality.
 
@@ -20,7 +20,7 @@ Namespaces are contained in an **Assembly**. Physically, it is a file on disk as
 
 When generating a console application, an **AssemblyInfo.cs** file is created. AssemblyInfo.cs is the identification for the assembly that will be produced as a result of compiling the application. Under the **References** folder, we find assemblies that the application depends on so that it can execute and do its job. **App.Config** is an XML file that we use to store the configuration of the application. As an example, we can store the database connection string for a database in App.Config.
 
-## Variables and Constants
+## 3. Variables and Constants
 
 A **Variable** is a name given to a storage location in memory. A **constant** is an **immutable** value where it is known at compile time, and its value cannot be changed during the lifetime of the application. We use constants to create safety in our application where we don't want any logic to change the value by mistake.
 
@@ -48,7 +48,7 @@ A **Variable** is a name given to a storage location in memory. A **constant** i
 | Enum          |
 | Class         |
 
-## Overflow
+### Overflow
 
 An **Overflow** is when we exceed the boundary of a data type.
 
@@ -57,24 +57,24 @@ byte number = 255;
 number = number + 1;
 ```
 
-## Scope
+### Scope
 
 **Scope** is when a variable or constant has meaning and is accessible.
 
-## Type Conversion
+## 4. Type Conversion
 
 An **Explicit** conversion is one which has to be stated explicitly, an **Implicit** conversion is one which can be used implicitly, in other words; without the code having to state it.
 
 ### Implicit Type Conversion
 
-**Implicit conversion** is the conversion **from a derived class into a base class**, like converting an int to a float.
+**Implicit conversion** is the conversion **from a derived class into a base class**, like converting a byte to an int, or an int to a float.
 
 ```
 byte b = 1;          //                            00000001
 int i = b;           // 00000000 00000000 00000000 00000001
 
 int i = 1;
-float f = i;
+float f = i; // We are implicitly telling the compiler to convert this int to a float.
 ```
 
 ### Explicit Type Conversion
@@ -83,11 +83,11 @@ float f = i;
 
 ```
 int i = 1;
-// byte b = 1; This won't compile
-byte b = (byte)i;
+// byte b = 1; // This won't compile
+byte b = (byte)i; // We are explicitly telling the compiler to convert this int to a byte.
 
 float f = 1.0f;
-int i = (int)f;
+int i = (int)f; // We are explicitly telling the compiler to convert this float to an int.
 ```
 
 ### Non-Compatible Types
