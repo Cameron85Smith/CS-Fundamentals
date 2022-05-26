@@ -54,11 +54,11 @@ Classes are contained in a **Namespace**. A Namespace helps us to organize our c
 
 Namespaces are contained in an **Assembly**. Physically, it is a file on disk as either an executable file, or a **DLL (Dynamically Linked Library)**. An Assembly is a single unit of deployment.
 
-### [File Structure](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/HelloWorld)
+### File Structure: [Solution](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/HelloWorld)
 
 When generating a console application, an **AssemblyInfo.cs** file is created. AssemblyInfo.cs is the identification for the assembly that will be produced as a result of compiling the application. Under the **References** folder, we find assemblies that the application depends on so that it can execute and do its job. **App.Config** is an XML file that we use to store the configuration of the application. As an example, we can store the database connection string for a database in App.Config.
 
-## 3. Variables and Constants
+## 3. Variables and Constants: [Solution](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Variables)
 
 A **Variable** is a name given to a storage location in memory. A **constant** is an **immutable** value where it is known at compile time, and its value cannot be changed during the lifetime of the application. We use constants to create safety in our application where we don't want any logic to change the value by mistake.
 
