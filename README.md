@@ -59,7 +59,8 @@ Namespaces are contained in an **Assembly**. Physically, it is a file on disk as
 
 When generating a console application, an **AssemblyInfo.cs** file is created. AssemblyInfo.cs is the identification for the assembly that will be produced as a result of compiling the application. Under the **References** folder, we find assemblies that the application depends on so that it can execute and do its job. **App.Config** is an XML file that we use to store the configuration of the application. As an example, we can store the database connection string for a database in App.Config.
 
-## 3. Variables and Constants: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Variables)
+## 3. Variables and Constants
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Variables)
 
 A **Variable** is a name given to a storage location in memory. A **constant** is an **immutable** value where it is known at compile time, and its value cannot be changed during the lifetime of the application. We use constants to create safety in our application where we don't want any logic to change the value by mistake.
 
@@ -101,7 +102,8 @@ number = number + 1;
 
 **Scope** is when a variable or constant has meaning and is accessible.
 
-## 4. Type Conversion: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/TypeConversion)
+## 4. Type Conversion
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/TypeConversion)
 
 An **Explicit** conversion is one which has to be stated explicitly, an **Implicit** conversion is one which can be used implicitly, in other words; without the code having to state it.
 
@@ -139,7 +141,8 @@ int i = Convert.ToInt32(s);
 // or
 int j = int.Parse(s);
 ```
-## 5. Operators: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Operators)
+## 5. Operators
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Operators)
 
 ### Arithmetic
 
@@ -155,7 +158,8 @@ int a = 1;
 int b = ++a  // a = 2, b = 2
 ```
 
-## 6. Non-Primitive Types: [Class Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Classes) | [Array Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Arrays) | [String Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Strings) | [Enum Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Enums) | [Text Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/TextExercise)
+## 6. Non-Primitive Types
+[Class Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Classes) | [Array Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Arrays) | [String Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Strings) | [Enum Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Enums) | [Text Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/TextExercise)
 
 ### Classes
 
@@ -270,7 +274,8 @@ We can use the Enum with dot notation.
 var method = ShippingMethod.Express;
 ```
 
-## 7. Reference Types and Value Types: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ReferenceValueTypes)
+## 7. Reference Types and Value Types
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ReferenceValueTypes)
 
 All **primitive types are structures**. We use structures for small types, like RGB colours and points. Structures take no more than 8 bytes. It is internally defined as a structure in .NET.
 
@@ -299,7 +304,8 @@ Heap -------------------------------------------------Stack
 
 As can be seen, the memory address is copied, not the actual value.
 
-## 8. Iteration Statements: [Iteration Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Iterations) | [Control Flow Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ControlFlowExercise) | [Conditional Statement Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ConditionalStatementsExercise)
+## 8. Iteration Statements
+[Iteration Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Iterations) | [Control Flow Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ControlFlowExercise) | [Conditional Statement Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ConditionalStatementsExercise)
 
 We use a **for loop** when we know how many times we are going to iterate through a collection.
 We use a **while loop** when we don't know how many times we are going to do an iteration.
@@ -317,7 +323,8 @@ The control flow of your application depends largely on conditional and iteratio
 - foreach loops
 - while loops
 
-## 9. Random Class: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Random)
+## 9. Random Class
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Random)
 
 We use the Random class when we want to generate a random value.
 
@@ -344,7 +351,8 @@ var jagged = new int[3][]; // Two brackets.
 [0 | 1 | 2 ]
 ```
 
-## 11. List: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/List) | [Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ArrayListExercise)
+## 11. List
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/List) | [Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ArrayListExercise)
 
 The difference between an Array and a List is that an Array have a fixed size, where a List has a dynamic size. We use a List when we don't know how many objects we will be working with. A List is a generic type and it is indicated by angle brackets.
 
@@ -352,13 +360,15 @@ The difference between an Array and a List is that an Array have a fixed size, w
 var numbers = new List<int>();
 ```
 
-## 12. StringBuilder: [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/StringBuilder)
+## 12. StringBuilder
+[Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/StringBuilder)
 
 The string class is immutable, which means that once you create a string object you cannot change its content. If you're going to do a lot of string manipulation, you can use a StringBuilder.
 
 StringBuilders is a class that is defined in the System.Text namespace, and it represents a mutable string. It provides methods for manipulating a string, like Append(), Insert(), etc.
 
-## 13. Working with Files, Directories, and Paths: [File Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/FileAndFileInfo) | [Directory Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/DirectoryAndDirectoryInfo) | [Path Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Path) | [Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/FileExercise)
+## 13. Working with Files, Directories, and Paths
+[File Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/FileAndFileInfo) | [Directory Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/DirectoryAndDirectoryInfo) | [Path Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/Path) | [Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/FileExercise)
 
 ### File classes
 
