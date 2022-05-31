@@ -233,7 +233,7 @@ A **string is a sequence of characters**. We use double quotes for strings, and 
 Both are compiled to System.String in IL (Intermediate Language).
 System.String is a class and used for accessing string static methods like String.Format(), String.Compare(), etc.
 
-Here, you can see that **string** is used for declaring variables, and **String** is used for accessing the static methods like String.Concat() that joins two strings together.
+**string** is used for declaring variables; **String** is used for accessing static methods like String.Concat() that joins two strings together.
 ```
 using System;  
 namespace ConsoleApplication {  
