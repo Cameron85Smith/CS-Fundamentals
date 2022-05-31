@@ -354,7 +354,7 @@ var jagged = new int[3][]; // Two brackets.
 ## 11. List
 [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/List) | [Exercise](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/ArrayListExercise)
 
-The difference between an Array and a List is that an Array have a fixed size, where a List has a dynamic size. We use a List when we don't know how many objects we will be working with. A List is a generic type and it is indicated by angle brackets.
+The difference between an Array and a List is that an Array has a fixed size and a List has a dynamic size. We use a List when we don't know how many objects we will be working with. A List is a generic type and it is indicated by angle brackets.
 
 ```
 var numbers = new List<int>();
@@ -363,7 +363,7 @@ var numbers = new List<int>();
 ## 12. StringBuilder
 [Introduction](https://github.com/Cameron85Smith/CS-Fundamentals/tree/main/StringBuilder)
 
-The string class is immutable, which means that once you create a string object you cannot change its content. If you're going to do a lot of string manipulation, you can use a StringBuilder.
+The string class is immutable. This means that once you create a string object you cannot change its content. StringBuilder is used if you plan on doing a lot of string manipulation.
 
 StringBuilders is a class that is defined in the System.Text namespace, and it represents a mutable string. It provides methods for manipulating a string, like Append(), Insert(), etc.
 
